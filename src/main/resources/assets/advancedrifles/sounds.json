@@ -1,0 +1,8 @@
+{
+    "item.crossbow.fire": {
+        "sounds": [{ "name": "advancedrifles:item/crossbow/fire" }]
+    },
+    "item.assaulter.reload": {
+        "sounds": [{ "name": "advancedrifles:item/assaulter/reload" }]
+    }
+}

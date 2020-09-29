@@ -1,0 +1,34 @@
+{
+    "id": "grenade_launcher",
+    "general": {
+        "rate": 10,
+        "gripType": "two_handed",
+        "maxAmmo": 6,
+        "recoilAngle": 5.0,
+        "recoilKick": 1.0,
+        "recoilDurationOffset": 0.25
+    },
+    "projectile": {
+        "item": "cgm:grenade",
+        "visible": true,
+        "auto": false,
+        "damage": 25.0,
+        "size": 0.2,
+        "speed": 5,
+        "life": 50,
+        "gravity": true,
+        "damageReduceOverLife": false,
+        "damageReduceIfNotZoomed": false
+    },
+    "sounds": {
+        "fire": "cgm:grenade_fire",
+        "reload": "cgm:pistol_reload",
+        "cock": "cgm:shotgun_fire"
+    },
+    "display": {
+        "flash": {
+            "yOffset": -4.6,
+            "zOffset": -6.8
+        }
+    }
+}
