@@ -44,5 +44,6 @@ public class ClientProxy extends CommonProxy
 		GuiWorkbench.addDisplayProperty(new ItemStack(ModItems.CROSSBOW), new DisplayProperty(0.0, 0.55, -0.15, 0.0, 0.0, 0.0, 3.0));
         GuiWorkbench.addDisplayProperty(new ItemStack(ModItems.CROSSBOW_DART), new DisplayProperty(0.0, 0.55, -0.15, 0.0, 0.0, 0.0, 3.0));
         GuiWorkbench.addDisplayProperty(new ItemStack(ModItems.ADVANCED_SHELL), new DisplayProperty(0.0, 0.55, -0.15, 0.0, 0.0, 0.0, 3.0));
+        GuiWorkbench.addDisplayProperty(new ItemStack(ModItems.ADVANCED_BAZOOKA), new DisplayProperty(0.0, 0.55, -0.15, 0.0, 0.0, 0.0, 3.0));
     }
 }

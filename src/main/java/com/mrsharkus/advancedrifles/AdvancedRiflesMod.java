@@ -149,6 +149,10 @@ public class AdvancedRiflesMod
                 new ItemStack(Items.EMERALD, 1),
                 new ItemStack(Blocks.CONCRETE, 1, EnumDyeColor.RED.getMetadata()),
                 new ItemStack(Blocks.CONCRETE, 5, EnumDyeColor.GREEN.getMetadata()));
+        WorkbenchRegistry.registerRecipe(new ItemStack(ModItems.ADVANCED_BAZOOKA),
+                new ItemStack(Items.IRON_INGOT, 25),
+                new ItemStack(Blocks.CONCRETE, 10, EnumDyeColor.GRAY.getMetadata()),
+                new ItemStack(Blocks.CONCRETE, 15, EnumDyeColor.SILVER.getMetadata()));
 
         proxy.init();
     }

@@ -32,4 +32,5 @@ public class ItemNames
     public static final String CROSSBOW = Reference.MOD_ID + ":crossbow";
 	public static final String CROSSBOW_DART = Reference.MOD_ID + ":crossbow_dart";
 	public static final String ADVANCED_SHELL = Reference.MOD_ID + ":advanced_shell";
+	public static final String ADVANCED_BAZOOKA = Reference.MOD_ID + ":advanced_bazooka";
 }

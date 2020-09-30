@@ -104,6 +104,9 @@ public class ModItems
 	
     @GameRegistry.ObjectHolder(ItemNames.ADVANCED_SHELL)
     public static final ItemAmmo ADVANCED_SHELL = null;
+	
+    @GameRegistry.ObjectHolder(ItemNames.ADVANCED_BAZOOKA)
+    public static final Item ADVANCED_BAZOOKA = null;
 
 	
 
@@ -140,6 +143,7 @@ public class ModItems
 		ITEMS.add(new ItemGun(new ResourceLocation(Reference.MOD_ID, "shotgun_doublebarrel")).setCreativeTab(AdvancedRiflesMod.TAB));
 		ITEMS.add(new ItemGun(new ResourceLocation(Reference.MOD_ID, "shotgun_sawedoff")).setCreativeTab(AdvancedRiflesMod.TAB));
 		ITEMS.add(new ItemGun(new ResourceLocation(Reference.MOD_ID, "crossbow")).setCreativeTab(AdvancedRiflesMod.TAB));
+		ITEMS.add(new ItemGun(new ResourceLocation(Reference.MOD_ID, "advanced_bazooka")).setCreativeTab(AdvancedRiflesMod.TAB));
 		
         /* Registering custom ammo. Make sure you change in your gun json to use your custom ammo if you implement one */
         ITEMS.add(new ItemAmmo(new ResourceLocation(Reference.MOD_ID, "crossbow_dart")).setCreativeTab(AdvancedRiflesMod.TAB));

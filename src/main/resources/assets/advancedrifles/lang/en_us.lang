@@ -27,5 +27,6 @@ item.advancedrifles.shotgun_doublebarrel.name=Double-Barrel Shotgun
 item.advancedrifles.shotgun_sawedoff.name=Sawed-Off Shotgun
 item.advancedrifles.shotgun_doublebarrel_mk2.name=Double-Barrel Shotgun Mark II
 item.advancedrifles.advanced_shell.name=Advanced Shell
+item.advancedrifles.advanced_bazooka.name=Advanced Bazooka
 
 itemGroup.advancedrifles=Advanced Rifles

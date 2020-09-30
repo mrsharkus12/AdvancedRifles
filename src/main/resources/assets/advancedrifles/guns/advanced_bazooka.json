@@ -1,19 +1,18 @@
 {
-    "id": "direct_hit",
+    "id": "advanced_bazooka",
     "general": {
-        "rate": 320,
+        "rate": 50,
         "gripType": "two_handed",
-        "maxAmmo": 1,
-        "recoilAngle": 0.1,
+        "maxAmmo": 4
     },
     "projectile": {
         "item": "cgm:missile",
         "visible": true,
         "auto": false,
-        "damage": 55.0,
-        "size": 10.2,
-        "speed": 10,
-        "life": 1000,
+        "damage": 125.0,
+        "size": 0.2,
+        "speed": 5,
+        "life": 100,
         "damageReduceOverLife": false,
         "damageReduceIfNotZoomed": false
     },
