@@ -108,7 +108,9 @@ public class ModItems
     @GameRegistry.ObjectHolder(ItemNames.ADVANCED_BAZOOKA)
     public static final Item ADVANCED_BAZOOKA = null;
 
-	
+    public static List<Item> getItems() {
+        return ITEMS;
+    }
 
     private static void register()
     {
