@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: LevviatasAdvancedRifles
+Implementation-Version: 0.6.0
+Specification-Vendor: examplemodsareus
+Specification-Title: examplemod
+Implementation-Timestamp: 2023-11-09T20:32:54+0100
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+
