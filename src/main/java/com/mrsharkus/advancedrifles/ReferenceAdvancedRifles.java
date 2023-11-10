@@ -1,10 +1,9 @@
-package com.mrcrayfish.advancedrifles;
+package com.mrsharkus.advancedrifles;
 
 /**
  * Author: MrCrayfish
  */
-public class Reference
-{
+public class ReferenceAdvancedRifles {
     /* Replace these with your modid, name, version. */
     public static final String MOD_ID = "advancedrifles";
     public static final String MOD_NAME = "Advanced Rifles";
@@ -18,6 +17,6 @@ public class Reference
      * yours is, otherwise you will get missing class exceptions. */
     public static final String DEPENDENCIES = "required-after:cgm@[0.13.1,);";
 
-    public static final String PROXY_CLIENT = "com.mrcrayfish.advancedrifles.proxy.ClientProxy";
-    public static final String PROXY_SERVER = "com.mrcrayfish.advancedrifles.proxy.CommonProxy";
+    public static final String PROXY_CLIENT = "com.mrsharkus.advancedrifles.proxy.ClientProxy";
+    public static final String PROXY_SERVER = "com.mrsharkus.advancedrifles.proxy.CommonProxy";
 }

@@ -1,11 +1,12 @@
-package com.mrcrayfish.advancedrifles.proxy;
+package com.mrsharkus.advancedrifles.proxy;
 
 /**
  * Author: MrCrayfish
  */
-public class CommonProxy
-{
-    public void preInit() {}
+public class CommonProxy {
+    public void preInit() {
+    }
 
-    public void init() {}
+    public void init() {
+    }
 }

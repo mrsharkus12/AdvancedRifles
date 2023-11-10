@@ -1,6 +1,7 @@
 {
     "id": "m16",
     "general": {
+        "auto": true,
         "rate": 2,
         "gripType": "two_handed",
         "maxAmmo": 15,

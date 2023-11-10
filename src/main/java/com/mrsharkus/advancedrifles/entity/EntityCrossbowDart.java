@@ -1,6 +1,6 @@
-package com.mrcrayfish.advancedrifles.entity;
+package com.mrsharkus.advancedrifles.entity;
 
-import com.mrcrayfish.advancedrifles.core.ModItems;
+import com.mrsharkus.advancedrifles.core.ModItems;
 import com.mrcrayfish.guns.entity.EntityProjectile;
 import com.mrcrayfish.guns.item.ItemGun;
 import com.mrcrayfish.guns.object.Gun;
@@ -15,33 +15,27 @@ import net.minecraft.world.World;
 /**
  * Author: MrCrayfish
  */
-public class EntityCrossbowDart extends EntityProjectile
-{
-    public EntityCrossbowDart(World worldIn)
-    {
+public class EntityCrossbowDart extends EntityProjectile {
+    public EntityCrossbowDart(World worldIn) {
         super(worldIn);
     }
 
-    public EntityCrossbowDart(World worldIn, EntityLivingBase shooter, ItemGun item, Gun modifiedGun)
-    {
+    public EntityCrossbowDart(World worldIn, EntityLivingBase shooter, ItemGun item, Gun modifiedGun) {
         super(worldIn, shooter, item, modifiedGun);
     }
 
     @Override
-    protected void onHitEntity(Entity entity, double x, double y, double z)
-    {
+    protected void onHitEntity(Entity entity, double x, double y, double z) {
         super.onHitEntity(entity, x, y, z);
         this.onHit(x, y, z);
     }
 
     @Override
-    protected void onHitBlock(IBlockState state, BlockPos pos, double x, double y, double z)
-    {
+    protected void onHitBlock(IBlockState state, BlockPos pos, double x, double y, double z) {
         this.onHit(x, y, z);
     }
 
-    private void onHit(double x, double y, double z)
-    {
+    private void onHit(double x, double y, double z) {
         world.spawnEntity(new EntityItem(world, x, y, z, new ItemStack(ModItems.CROSSBOW_DART)));
     }
 }

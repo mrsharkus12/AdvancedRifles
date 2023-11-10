@@ -1,13 +1,10 @@
-package com.mrcrayfish.advancedrifles;
+package com.mrsharkus.advancedrifles;
 
-import com.mrcrayfish.advancedrifles.core.ModItems;
-import com.mrcrayfish.advancedrifles.entity.EntityCrossbowDart;
-import com.mrcrayfish.advancedrifles.entity.EntityAdvancedShell;
-import com.mrcrayfish.advancedrifles.proxy.CommonProxy;
-import com.mrcrayfish.guns.client.gui.DisplayProperty;
-import com.mrcrayfish.guns.client.gui.GuiWorkbench;
+import com.mrsharkus.advancedrifles.core.ModItems;
+import com.mrsharkus.advancedrifles.entity.EntityAdvancedShell;
+import com.mrsharkus.advancedrifles.entity.EntityCrossbowDart;
+import com.mrsharkus.advancedrifles.proxy.CommonProxy;
 import com.mrcrayfish.guns.common.WorkbenchRegistry;
-import com.mrcrayfish.guns.item.AmmoRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -19,7 +16,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /*
  * This is all you need in your mod class to create an addon.
@@ -28,26 +24,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 /**
  * Author: MrCrayfish
  */
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, acceptedMinecraftVersions = Reference.MC_VERSION, dependencies = Reference.DEPENDENCIES)
-public class AdvancedRiflesMod
-{
-    public static final CreativeTabs TAB = new CreativeTabs(Reference.MOD_ID)
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.ASSAULT_RIFLE_ADVANCED);
-        }
-    };
+@Mod(modid = ReferenceAdvancedRifles.MOD_ID, name = ReferenceAdvancedRifles.MOD_NAME, version = ReferenceAdvancedRifles.MOD_VERSION, acceptedMinecraftVersions = ReferenceAdvancedRifles.MC_VERSION, dependencies = ReferenceAdvancedRifles.DEPENDENCIES)
+public class AdvancedRiflesMod {
+    public static final CreativeTabs TAB = new CreativeTabARM(ReferenceAdvancedRifles.MOD_ID);
 
-    @SidedProxy(clientSide = Reference.PROXY_CLIENT, serverSide = Reference.PROXY_SERVER)
+    @SidedProxy(clientSide = ReferenceAdvancedRifles.PROXY_CLIENT, serverSide = ReferenceAdvancedRifles.PROXY_SERVER)
     public static CommonProxy proxy;
-	
+
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-        EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "crossbow_dart"), EntityCrossbowDart.class, Reference.MOD_ID + ".crossbow_dart", 0, this, 64, 80, true);
-        EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "advanced_shell"), EntityAdvancedShell.class, Reference.MOD_ID + ".advanced_shell", 0, this, 64, 80, true);
+    public void preInit(FMLPreInitializationEvent event) {
+        EntityRegistry.registerModEntity(new ResourceLocation(ReferenceAdvancedRifles.MOD_ID, "crossbow_dart"), EntityCrossbowDart.class, ReferenceAdvancedRifles.MOD_ID + ".crossbow_dart", 0, this, 64, 80, true);
+        EntityRegistry.registerModEntity(new ResourceLocation(ReferenceAdvancedRifles.MOD_ID, "advanced_shell"), EntityAdvancedShell.class, ReferenceAdvancedRifles.MOD_ID + ".advanced_shell", 0, this, 64, 80, true);
         proxy.preInit();
     }
 
@@ -62,8 +49,7 @@ public class AdvancedRiflesMod
      * https://github.com/MrCrayfish/MrCrayfishGunMod/blob/master/src/main/java/com/mrcrayfish/guns/entity/EntityMissile.java
      */
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+    public void init(FMLInitializationEvent event) {
         /* Register new crafting recipes to the workbench */
         WorkbenchRegistry.registerRecipe(new ItemStack(ModItems.ASSAULT_RIFLE_ADVANCED),
                 new ItemStack(Items.IRON_INGOT, 35),
@@ -92,7 +78,7 @@ public class AdvancedRiflesMod
                 new ItemStack(Blocks.CONCRETE, 10, EnumDyeColor.GRAY.getMetadata()),
                 new ItemStack(Blocks.CONCRETE, 10, EnumDyeColor.SILVER.getMetadata()));
         WorkbenchRegistry.registerRecipe(new ItemStack(ModItems.CHEAPRIFLE),
-				new ItemStack(Items.IRON_INGOT, 12));
+                new ItemStack(Items.IRON_INGOT, 12));
         WorkbenchRegistry.registerRecipe(new ItemStack(ModItems.GLOCK),
                 new ItemStack(Items.IRON_INGOT, 17),
                 new ItemStack(Blocks.CONCRETE, 1, EnumDyeColor.SILVER.getMetadata()));

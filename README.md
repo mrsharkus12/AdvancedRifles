@@ -1,5 +1,8 @@
-# Advanced Rifles
-An addon for MrCrayfish`s Gun Mod
+# How to build
+Download these files:
 
-A whole source code for my addon.
-Go to https://www.curseforge.com/minecraft/mc-mods/advanced-rifles/files to instal already compiled and ready-to-play builds
+[Obfuscation](https://www.curseforge.com/minecraft/mc-mods/obfuscate/files/2916310)
+
+[MrCrayfish's Gun Mod](https://www.curseforge.com/minecraft/mc-mods/mrcrayfishs-gun-mod/files/2854400)
+
+Put them on the 'libs' folder and then build the [Advanced Rifles] mod provided here

@@ -1,6 +1,6 @@
-package com.mrcrayfish.advancedrifles.client.render.entity;
+package com.mrsharkus.advancedrifles.client.render.entity;
 
-import com.mrcrayfish.advancedrifles.entity.EntityAdvancedShell;
+import com.mrsharkus.advancedrifles.entity.EntityAdvancedShell;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
@@ -21,23 +21,19 @@ import java.util.List;
 /**
  * Author: MrCrayfish
  */
-public class RenderAdvancedShell extends Render<EntityAdvancedShell>
-{
-    public RenderAdvancedShell(RenderManager renderManager)
-    {
+public class RenderAdvancedShell extends Render<EntityAdvancedShell> {
+    public RenderAdvancedShell(RenderManager renderManager) {
         super(renderManager);
     }
 
     @Nullable
     @Override
-    protected ResourceLocation getEntityTexture(EntityAdvancedShell entity)
-    {
+    protected ResourceLocation getEntityTexture(EntityAdvancedShell entity) {
         return null;
     }
 
     @Override
-    public void doRender(EntityAdvancedShell entity, double x, double y, double z, float entityYaw, float partialTicks)
-    {
+    public void doRender(EntityAdvancedShell entity, double x, double y, double z, float entityYaw, float partialTicks) {
         GlStateManager.pushMatrix();
         {
             GlStateManager.translate(x, y, z);
@@ -55,25 +51,21 @@ public class RenderAdvancedShell extends Render<EntityAdvancedShell>
         super.doRender(entity, x, y, z, entityYaw, partialTicks);
     }
 
-    private void renderBakedModel(IBakedModel model)
-    {
+    private void renderBakedModel(IBakedModel model) {
         this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder buffer = tessellator.getBuffer();
         buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.ITEM);
-        for(EnumFacing enumfacing : EnumFacing.values())
-        {
+        for (EnumFacing enumfacing : EnumFacing.values()) {
             this.renderQuads(buffer, model.getQuads(null, enumfacing, 0L));
         }
         this.renderQuads(buffer, model.getQuads(null, null, 0L));
         tessellator.draw();
     }
 
-    private void renderQuads(BufferBuilder buffer, List<BakedQuad> quads)
-    {
+    private void renderQuads(BufferBuilder buffer, List<BakedQuad> quads) {
         int i = 0;
-        for(int j = quads.size(); i < j; ++i)
-        {
+        for (int j = quads.size(); i < j; ++i) {
             BakedQuad quad = quads.get(i);
             net.minecraftforge.client.model.pipeline.LightUtil.renderQuadColor(buffer, quad, -1);
         }
